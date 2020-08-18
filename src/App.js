@@ -35,7 +35,7 @@ function App(){
   }
 
 return(
-  <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 60) ? 'app' : 'app night') : 'app'}>
+  <div className={(typeof weather.main != "undefined") ? ((Math.round((weather.main.temp)*9/5)+32 < 60) ? 'app' : 'app night') : 'app'}>
  <main>
    <div className ="search-box">
      <input
